@@ -1,0 +1,26 @@
+.error-banner {
+    background: var(--color-background-danger);
+    border: 0.5px solid var(--color-border-danger);
+    border-radius: var(--border-radius-lg);
+    padding: 1rem 1.25rem;
+    color: var(--color-text-danger);
+}
+
+.error-banner__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    margin: 0 0 4px 0;
+    font-size: 14px;
+}
+
+.error-banner__heading .ti {
+    font-size: 16px;
+}
+
+.error-banner__body {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    margin: 0;
+}

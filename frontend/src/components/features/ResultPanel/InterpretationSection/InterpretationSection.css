@@ -1,0 +1,7 @@
+.interpretation__text {
+    font-size: 14px;
+    color: var(--color-text-primary);
+    line-height: 1.7;
+    margin: 0;
+    white-space: pre-wrap;
+}
