@@ -1,0 +1,93 @@
+.firm-branch {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: border-color 0.15s;
+}
+
+.firm-branch--equilibrium {
+    border-color: var(--color-border-info);
+}
+
+/* ── Header button ── */
+.firm-branch__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--color-background-primary);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+}
+
+.firm-branch--equilibrium .firm-branch__header {
+    background: var(--color-background-info);
+}
+
+.firm-branch__header:hover {
+    background: var(--color-background-secondary);
+}
+
+.firm-branch--equilibrium .firm-branch__header:hover {
+    background: var(--color-background-info);
+    filter: brightness(1.05);
+}
+
+.firm-branch__header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.firm-branch__firm-icon {
+    font-size: 15px;
+    color: var(--color-text-info);
+}
+
+.firm-branch__firm-key {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.firm-branch__sep {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+}
+
+.firm-branch__response {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+.firm-branch__chevron {
+    font-size: 14px;
+    color: var(--color-text-tertiary);
+    flex-shrink: 0;
+}
+
+/* ── Body ── */
+.firm-branch__body {
+    padding: 12px 14px;
+    border-top: 0.5px solid var(--color-border-tertiary);
+}
+
+.firm-branch__section-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 8px 0;
+}
+
+.firm-branch__section-label--mt {
+    margin-top: 12px;
+}

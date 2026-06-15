@@ -1,0 +1,95 @@
+.params-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ── Header ── */
+.params-panel__header {
+    margin-bottom: 1rem;
+}
+
+.params-panel__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 4px 0;
+}
+
+.params-panel__subtitle {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* ── Tabs ── */
+.params-panel__tabs {
+    display: flex;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    margin-bottom: 1rem;
+}
+
+.params-panel__tab {
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--color-text-secondary);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.params-panel__tab:hover {
+    color: var(--color-text-primary);
+}
+
+.params-panel__tab--active {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    border-bottom-color: var(--color-border-info);
+}
+
+/* ── Fields grid ── */
+.params-panel__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+/* ── Solve button ── */
+.params-panel__solve-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--border-radius-md);
+    border: 0.5px solid var(--color-border-secondary);
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+    transition: opacity 0.15s, background 0.15s;
+}
+
+.params-panel__solve-btn:hover:not(:disabled) {
+    background: var(--color-background-secondary);
+}
+
+.params-panel__solve-btn--loading,
+.params-panel__solve-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: var(--color-background-secondary);
+}
+
+.params-panel__solve-btn .ti {
+    font-size: 14px;
+}

@@ -1,0 +1,29 @@
+.raw-json {
+    margin-top: 8px;
+}
+
+.raw-json__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.raw-json__toggle .ti {
+    font-size: 13px;
+}
+
+.raw-json__pre {
+    margin-top: 8px;
+    padding: 12px 14px;
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    font-size: 11px;
+    font-family: var(--font-mono);
+    color: var(--color-text-secondary);
+    overflow-x: auto;
+    line-height: 1.6;
+}

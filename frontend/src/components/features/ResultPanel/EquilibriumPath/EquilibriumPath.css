@@ -1,0 +1,53 @@
+.eq-path {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.eq-path__step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.eq-path__node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.eq-path__player {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--color-text-secondary);
+}
+
+.eq-path__chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 6px 12px;
+}
+
+.eq-path__chip-icon {
+    font-size: 14px;
+    color: var(--color-text-info);
+}
+
+.eq-path__chip-label {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.eq-path__arrow {
+    font-size: 14px;
+    color: var(--color-text-tertiary);
+    margin-top: 16px;
+}

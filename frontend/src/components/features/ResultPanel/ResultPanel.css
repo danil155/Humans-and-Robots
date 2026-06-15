@@ -1,0 +1,36 @@
+.result-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Header ── */
+.result-panel__header {
+    margin-bottom: 1rem;
+}
+
+.result-panel__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 4px 0;
+}
+
+.result-panel__subtitle {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* ── Payoffs sub-block ── */
+.result-panel__payoffs-block {
+    margin-top: 12px;
+}
+
+.result-panel__sub-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 8px 0;
+}

@@ -1,0 +1,27 @@
+.lp-detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.lp-tile {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 6px 10px;
+}
+
+.lp-tile__label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--color-text-tertiary);
+    margin: 0 0 2px 0;
+}
+
+.lp-tile__value {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+}
