@@ -38,6 +38,10 @@ export function useSolver() {
                     c_m: data.lp_solution.c_m,
                     c_r: data.lp_solution.c_r,
                     c_h: data.lp_solution.c_h,
+                    pi_1: data.lp_solution.pi_1,
+                    pi_2: data.lp_solution.pi_2,
+                    pi_3: data.lp_solution.pi_3,
+                    pi_4: data.lp_solution.pi_4,
                 },
                 analysis: data.analysis,
                 full_tree_eval: data.full_tree_eval

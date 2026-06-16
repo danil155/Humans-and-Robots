@@ -4,7 +4,9 @@ import { PayoffCards } from "./PayoffCards/PayoffCards";
 import { FirmBranch } from "./FirmBranch/FirmBranch";
 import { InterpretationSection } from "./InterpretationSection/InterpretationSection";
 import { SensitivitySection } from "./SensitivitySection/SensitivitySection";
+import { LPSolutionSection } from "./LPSolutionSection/LPSolutionSection";
 import "./ResultPanel.css";
+
 
 export function ResultPanel({ result, loading, error }) {
     return (
@@ -39,6 +41,10 @@ export function ResultPanel({ result, loading, error }) {
                             </div>
                         )}
                     </Section>
+
+                    {result.lp_solution && (
+                        <LPSolutionSection lpSolution={result.lp_solution} />
+                    )}
 
                     {result.full_tree_eval && (
                         <Section title="Дерево игры">
