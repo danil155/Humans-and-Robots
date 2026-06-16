@@ -73,6 +73,10 @@ class LPOptimum:
     y_r: float
     y_h: float
     z_max: float
+    pi_1: float
+    pi_2: float
+    pi_3: float
+    pi_4: float
     fire_cost: float = 0.0
 
 

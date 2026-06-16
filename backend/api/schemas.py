@@ -53,14 +53,18 @@ class PayoffsResponse(BaseModel):
 
 class LPSolutionResponse(BaseModel):
     y_m: float = Field(..., description='Объем ручного производства')
-    y_r: float = Field(..., description="Объем роботизированного производства")
-    y_h: float = Field(..., description="Объем гибридного производства")
-    z_max: float = Field(..., description="Максимальная прибыль")
-    fire_cost: float = Field(0.0, description="Издержки на сокращение")
-    operational_profit: float = Field(..., description="Операционная прибыль")
-    c_m: float = Field(..., description="Издержки ручного труда")
-    c_r: float = Field(..., description="Издержки роботов")
-    c_h: float = Field(..., description="Издержки гибрида")
+    y_r: float = Field(..., description='Объем роботизированного производства')
+    y_h: float = Field(..., description='Объем гибридного производства')
+    z_max: float = Field(..., description='Максимальная прибыль')
+    fire_cost: float = Field(0.0, description='Издержки на сокращение')
+    operational_profit: float = Field(..., description='Операционная прибыль')
+    c_m: float = Field(..., description='Издержки ручного труда')
+    c_r: float = Field(..., description='Издержки роботов')
+    c_h: float = Field(..., description='Издержки гибрида')
+    pi_1: float = Field(..., description='Трудовая двойственная переменная')
+    pi_2: float = Field(..., description='Роботизированная двойственная переменная')
+    pi_3: float = Field(..., description='Рыночная двойственная переменная')
+    pi_4: float = Field(..., description='Социальная двойственная переменная')
 
 
 class FullTreeEvalItem(BaseModel):

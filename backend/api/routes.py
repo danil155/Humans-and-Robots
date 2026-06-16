@@ -84,7 +84,11 @@ def _build_response(result: dict[str, any]) -> SolveGameResponse:
             operational_profit=lp_info.get('operational_profit', 0),
             c_m=lp_info.get('c_m', 0),
             c_r=lp_info.get('c_r', 0),
-            c_h=lp_info.get('c_h', 0)
+            c_h=lp_info.get('c_h', 0),
+            pi_1=lp_info.get('pi_1', 0),
+            pi_2=lp_info.get('pi_2', 0),
+            pi_3=lp_info.get('pi_3', 0),
+            pi_4=lp_info.get('pi_4', 0)
         ),
         full_tree_eval=full_tree,
         analysis=result.get('analysis')
