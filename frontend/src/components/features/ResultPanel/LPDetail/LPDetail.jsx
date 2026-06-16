@@ -5,7 +5,8 @@ const fmt = (n) =>
     Number(n).toLocaleString("ru-RU", { maximumFractionDigits: 2 });
 
 export function LPDetail({ lp }) {
-    if (!lp) return null;
+    if (!lp)
+        return null;
 
     const visible = LP_FIELDS.filter(({ k }) => lp[k] !== undefined);
 

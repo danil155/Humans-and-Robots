@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Badge }       from "../../../ui";
+import { Badge } from "../../../ui";
 import { PayoffCards } from "../PayoffCards/PayoffCards";
-import { LPDetail }    from "../LPDetail/LPDetail";
+import { LPDetail } from "../LPDetail/LPDetail";
 import { STRATEGY_ICON, STRATEGY_LABEL } from "../../../../constants/gameConfig";
 import "./FirmBranch.css";
 
@@ -11,7 +11,6 @@ export function FirmBranch({ firmKey, branch }) {
 
     return (
         <div className={`firm-branch${isEq ? " firm-branch--equilibrium" : ""}`}>
-            {/* header row */}
             <button
                 className="firm-branch__header"
                 onClick={() => setOpen((o) => !o)}
@@ -43,7 +42,6 @@ export function FirmBranch({ firmKey, branch }) {
                 />
             </button>
 
-            {/* expanded body */}
             {open && (
                 <div className="firm-branch__body">
                     <p className="firm-branch__section-label">Выигрыши</p>

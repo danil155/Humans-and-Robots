@@ -2,7 +2,8 @@ import { Section } from "../../../ui";
 import "./InterpretationSection.css";
 
 export function InterpretationSection({ text }) {
-    if (!text) return null;
+    if (!text)
+        return null;
 
     return (
         <Section title="Интерпретация">

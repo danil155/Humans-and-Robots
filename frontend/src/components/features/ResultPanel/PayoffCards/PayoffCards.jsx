@@ -5,7 +5,8 @@ const fmt = (n) =>
     Number(n).toLocaleString("ru-RU", { maximumFractionDigits: 2 });
 
 export function PayoffCards({ payoffs }) {
-    if (!payoffs) return null;
+    if (!payoffs)
+        return null;
 
     return (
         <div className="payoff-cards">

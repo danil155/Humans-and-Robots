@@ -14,7 +14,6 @@ export function ResultPanel({ result, loading, error }) {
                 <p className="result-panel__subtitle">Совершенное в подиграх равновесие</p>
             </header>
 
-            {/* ── States ── */}
             {!result && !loading && !error && (
                 <EmptyState message="Заполните параметры и нажмите «Построить равновесие»" />
             )}
@@ -28,10 +27,8 @@ export function ResultPanel({ result, loading, error }) {
 
             {error && <ErrorBanner message={error} />}
 
-            {/* ── Result sections ── */}
             {result && (
                 <>
-                    {/* Nash equilibrium */}
                     <Section title="Равновесие по Нэшу (совершенное в подиграх)">
                         <EquilibriumPath path={result.equilibrium} />
 
@@ -43,7 +40,6 @@ export function ResultPanel({ result, loading, error }) {
                         )}
                     </Section>
 
-                    {/* Game tree */}
                     {result.full_tree_eval && (
                         <Section title="Дерево игры">
                             {Object.entries(result.full_tree_eval).map(([firmKey, branch]) => (
@@ -52,13 +48,10 @@ export function ResultPanel({ result, loading, error }) {
                         </Section>
                     )}
 
-                    {/* Interpretation */}
                     <InterpretationSection text={result.interpretation} />
 
-                    {/* Sensitivity */}
                     <SensitivitySection data={result.analysis} />
 
-                    {/* Debug */}
                     <RawJsonPanel data={result} />
                 </>
             )}

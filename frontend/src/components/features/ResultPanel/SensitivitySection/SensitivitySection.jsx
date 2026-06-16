@@ -2,10 +2,12 @@ import { Section } from "../../../ui";
 import "./SensitivitySection.css";
 
 export function SensitivitySection({ data }) {
-    if (!data) return null;
+    if (!data)
+        return null;
 
     const entries = Object.entries(data);
-    if (!entries.length) return null;
+    if (!entries.length)
+        return null;
 
     return (
         <Section title="Анализ чувствительности">
@@ -14,8 +16,8 @@ export function SensitivitySection({ data }) {
                     <div key={key} className="sensitivity__row">
                         <span className="sensitivity__key">{key}</span>
                         <span className="sensitivity__val">
-              {typeof val === "string" ? val : JSON.stringify(val)}
-            </span>
+                            {typeof val === "string" ? val : JSON.stringify(val)}
+                        </span>
                     </div>
                 ))}
             </div>

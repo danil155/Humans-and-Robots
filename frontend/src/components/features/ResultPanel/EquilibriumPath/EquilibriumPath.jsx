@@ -16,8 +16,8 @@ export function EquilibriumPath({ path }) {
                                 aria-hidden="true"
                             />
                             <span className="eq-path__chip-label">
-                {STRATEGY_LABEL[strategy] ?? strategy}
-              </span>
+                                {STRATEGY_LABEL[strategy] ?? strategy}
+                            </span>
                         </div>
                     </div>
                     {i < path.length - 1 && (

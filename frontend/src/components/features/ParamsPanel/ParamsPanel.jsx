@@ -5,7 +5,7 @@ import "./ParamsPanel.css";
 
 const TABS = [
     { id: "prod", label: "ProductionParams", meta: PRODUCTION_PARAMS_META },
-    { id: "game", label: "GameParams",       meta: GAME_PARAMS_META },
+    { id: "game", label: "GameParams", meta: GAME_PARAMS_META },
 ];
 
 export function ParamsPanel({
@@ -18,9 +18,9 @@ export function ParamsPanel({
                             }) {
     const [activeTab, setActiveTab] = useState("prod");
 
-    const activeParams  = activeTab === "prod" ? prodParams  : gameParams;
+    const activeParams = activeTab === "prod" ? prodParams  : gameParams;
     const activeOnChange = activeTab === "prod" ? onProdChange : onGameChange;
-    const activeMeta    = TABS.find((t) => t.id === activeTab).meta;
+    const activeMeta = TABS.find((t) => t.id === activeTab).meta;
 
     return (
         <aside className="params-panel">
@@ -29,7 +29,6 @@ export function ParamsPanel({
                 <p className="params-panel__subtitle">Введите параметры и постройте равновесие</p>
             </header>
 
-            {/* tabs */}
             <nav className="params-panel__tabs" role="tablist">
                 {TABS.map(({ id, label }) => (
                     <button
@@ -44,7 +43,6 @@ export function ParamsPanel({
                 ))}
             </nav>
 
-            {/* fields */}
             <div className="params-panel__fields" role="tabpanel">
                 {activeMeta.map(({ key, label }) => (
                     <ParamInput
@@ -57,7 +55,6 @@ export function ParamsPanel({
                 ))}
             </div>
 
-            {/* action */}
             <button
                 className={`params-panel__solve-btn${loading ? " params-panel__solve-btn--loading" : ""}`}
                 onClick={onSolve}

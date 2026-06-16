@@ -3,7 +3,6 @@
     flex-direction: column;
 }
 
-/* ── Header ── */
 .result-panel__header {
     margin-bottom: 1rem;
 }
@@ -21,7 +20,6 @@
     margin: 0;
 }
 
-/* ── Payoffs sub-block ── */
 .result-panel__payoffs-block {
     margin-top: 12px;
 }

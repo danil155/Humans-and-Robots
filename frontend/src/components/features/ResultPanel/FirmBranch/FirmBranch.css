@@ -10,7 +10,6 @@
     border-color: var(--color-border-info);
 }
 
-/* ── Header button ── */
 .firm-branch__header {
     width: 100%;
     display: flex;
@@ -73,7 +72,6 @@
     flex-shrink: 0;
 }
 
-/* ── Body ── */
 .firm-branch__body {
     padding: 12px 14px;
     border-top: 0.5px solid var(--color-border-tertiary);

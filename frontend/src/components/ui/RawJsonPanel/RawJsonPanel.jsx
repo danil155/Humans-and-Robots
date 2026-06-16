@@ -4,7 +4,8 @@ import "./RawJsonPanel.css";
 export function RawJsonPanel({ data }) {
     const [open, setOpen] = useState(false);
 
-    if (!data) return null;
+    if (!data)
+        return null;
 
     return (
         <div className="raw-json">
@@ -21,8 +22,8 @@ export function RawJsonPanel({ data }) {
 
             {open && (
                 <pre className="raw-json__pre">
-          {JSON.stringify(data, null, 2)}
-        </pre>
+                    {JSON.stringify(data, null, 2)}
+                </pre>
             )}
         </div>
     );
