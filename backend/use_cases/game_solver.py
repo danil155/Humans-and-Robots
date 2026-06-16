@@ -199,5 +199,9 @@ class GameSolver:
             'y_h': lp_res.y_h,
             'c_m': self._prod_params.c_m,
             'c_r': self._prod_params.c_r,
-            'c_h': self._prod_params.c_h
+            'c_h': self._prod_params.c_h,
+            'pi_1': lp_res.pi_1,
+            'pi_2': lp_res.pi_2,
+            'pi_3': lp_res.pi_3,
+            'pi_4': lp_res.pi_4,
         }

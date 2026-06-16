@@ -36,7 +36,9 @@ class ScipyLPSolver(ILPSolver):
         res = linprog(c, A_ub=A_ub, b_ub=b_ub, bounds=bounds, method='highs')
 
         if not res.success:
-            return LPOptimum(0, 0, 0, float('-inf'))
+            return LPOptimum(0, 0, 0, float('-inf'), 0, 0, 0, 0)
+
+        shadow_prices = res.ineqlin
 
         c_fire = params.compute_fire_cost(x)
 
@@ -47,5 +49,9 @@ class ScipyLPSolver(ILPSolver):
             y_r=res.x[1],
             y_h=res.x[2],
             z_max=z_max,
+            pi_1=round(shadow_prices.marginals[0], 2),
+            pi_2=round(shadow_prices.marginals[1], 2),
+            pi_3=round(shadow_prices.marginals[2], 2),
+            pi_4=round(shadow_prices.marginals[3], 2),
             fire_cost=c_fire
         )
