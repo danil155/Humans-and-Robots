@@ -1,0 +1,142 @@
+COMPANY_CLUSTERS = {
+    'small_manufacturing': {
+        'name': 'Малое производство (до 50 чел)',
+        'description': 'Мебельная фабрика, типография, пекарня',
+        'production_params': {
+            'p': 120.0,
+            'L': 300.0,
+            'L_soc': 80.0,
+            'K0': 50.0,
+            'D': 500.0,
+            'a_m': 3.0,
+            'a_h': 1.0,
+            'b_r': 2.0,
+            'b_h': 0.8,
+            'gamma': 0.7,
+            'raw_material_cost': 30.0,
+            'w_m': 40.0,
+            'w_h': 55.0,
+            'insurance_rate': 0.3,
+            'robot_amortization': 55.0,
+            'hours_per_person': 40.0
+        },
+        'game_params': {
+            'w_m': 40.0,
+            'w_h': 55.0,
+            'effort_cost': 40.0,
+            'severance': 90.0,
+            'stress': 70.0,
+            'moral_sat': 5.0,
+            'fine': 5000.0,
+            'subsidy': 2000.0,
+            'taxes_base': 500.0,
+            'gdp_multiplier': 800.0,
+            'social_tension_cost': 4000.0
+        }
+    },
+    'medium_manufacturing': {
+        'name': 'Среднее производство (50–250 чел)',
+        'description': 'Машиностроение, пищевая промышленность',
+        'production_params': {
+            'p': 160.0,
+            'L': 800.0,
+            'L_soc': 180.0,
+            'K0': 350.0,
+            'D': 1500.0,
+            'a_m': 2.0,
+            'a_h': 0.8,
+            'b_r': 1.2,
+            'b_h': 0.5,
+            'gamma': 0.5,
+            'raw_material_cost': 40.0,
+            'w_m': 55.0,
+            'w_h': 80.0,
+            'insurance_rate': 0.3,
+            'robot_amortization': 30.0,
+            'hours_per_person': 40.0
+        },
+        'game_params': {
+            'w_m': 55.0,
+            'w_h': 80.0,
+            'effort_cost': 20.0,
+            'severance': 100.0,
+            'stress': 80.0,
+            'moral_sat': 5.0,
+            'fine': 15000.0,
+            'subsidy': 10000.0,
+            'taxes_base': 2500.0,
+            'gdp_multiplier': 3000.0,
+            'social_tension_cost': 10000.0
+        }
+    },
+    'large_corporation': {
+        'name': 'Крупная корпорация (250+ чел)',
+        'description': 'Автомобилестроение, химическая промышленность',
+        'production_params': {
+            'p': 220.0,
+            'L': 2000.0,
+            'L_soc': 250.0,
+            'K0': 1500.0,
+            'D': 5000.0,
+            'a_m': 1.5,
+            'a_h': 0.5,
+            'b_r': 0.8,
+            'b_h': 0.3,
+            'gamma': 0.3,
+            'raw_material_cost': 55.0,
+            'w_m': 65.0,
+            'w_h': 100.0,
+            'insurance_rate': 0.3,
+            'robot_amortization': 20.0,
+            'hours_per_person': 40.0
+        },
+        'game_params': {
+            'w_m': 65.0,
+            'w_h': 100.0,
+            'effort_cost': 10.0,
+            'severance': 150.0,
+            'stress': 120.0,
+            'moral_sat': 5.0,
+            'fine': 25000.0,
+            'subsidy': 20000.0,
+            'taxes_base': 6000.0,
+            'gdp_multiplier': 6000.0,
+            'social_tension_cost': 6000.0
+        }
+    },
+    'tech_startup': {
+        'name': 'Технологический стартап',
+        'description': 'Робототехника, ИТ-производство',
+        'production_params': {
+            'p': 350.0,
+            'L': 150.0,
+            'L_soc': 15.0,
+            'K0': 300.0,
+            'D': 800.0,
+            'a_m': 4.0,
+            'a_h': 0.3,
+            'b_r': 1.5,
+            'b_h': 0.2,
+            'gamma': 0.1,
+            'raw_material_cost': 60.0,
+            'w_m': 80.0,
+            'w_h': 150.0,
+            'insurance_rate': 0.3,
+            'robot_amortization': 50.0,
+            'hours_per_person': 40.0
+        },
+        'game_params': {
+            'w_m': 80.0,
+            'w_h': 150.0,
+            'effort_cost': 5.0,
+            'severance': 200.0,
+            'stress': 160.0,
+            'moral_sat': 5.0,
+            'fine': 2000.0,
+            'subsidy': 1500.0,
+            'taxes_base': 1500.0,
+            'gdp_multiplier': 10000.0,
+            'social_tension_cost': 1500.0
+        }
+    }
+}

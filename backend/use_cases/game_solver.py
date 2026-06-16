@@ -1,3 +1,5 @@
+import copy
+
 from domain.models import (
     ILPSolver,
     ProductionParams,
@@ -142,11 +144,16 @@ class GameSolver:
         """ Проверяет, изменится ли выбор Фирмы при удвоении штрафа """
 
         current_fine = self._game_params.fine
-        self._game_params.fine *= 2
-        self._game_params.fine = current_fine
 
-        return f'При удвоении штрафа ({current_fine * 2:.0f}) Фирма может отказаться от стратегии ' \
-               f'{base_firm_payoff > 0}'
+        game_copy = copy.copy(self._game_params)
+        game_copy.fine = current_fine * 2
+
+        solver = GameSolver(self._lp_solver, self._prod_params, game_copy)
+        result = solver.solve_backward_induction()
+        new_firm_payoff = result['equilibrium_payoffs']['Firm']
+
+        return (f'При удвоении штрафа ({current_fine * 2:.0f}) выигрыш фирмы: '
+                f'{new_firm_payoff:.2f} (было {base_firm_payoff:.2f})')
 
     def _calculate_payoffs(self, s_firm: str, s_people: str, s_reg: str) -> Payoffs:
         x = self._x_map[s_firm]
@@ -168,6 +175,8 @@ class GameSolver:
         u_reg = self._game_params.taxes_base + (x * self._game_params.gdp_multiplier)
         if s_people == 'sabotage':
             u_reg -= self._game_params.social_tension_cost
+        if s_reg == 'audit':
+            u_reg += self._game_params.fine
         if s_reg == 'subsidy':
             u_reg -= self._game_params.subsidy
 
